@@ -13,6 +13,8 @@
  * @param {Object=} spec Optional object for specifiying additional options: {forceFullscreen: ...}
  */
 gdjs.RuntimeGame = function(data, spec) {
+  GDAPI.game = this;
+
   spec = spec || {};
 
   this._variables = new gdjs.VariablesContainer(data.variables);
