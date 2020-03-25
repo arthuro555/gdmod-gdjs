@@ -39,6 +39,10 @@
  */
 gdjs.RuntimeObject = function(runtimeScene, objectData) {
     /**
+     * @type {string}
+     */
+    this.data = objectData;
+    /**
      * @protected
      * @type {string}
      */
