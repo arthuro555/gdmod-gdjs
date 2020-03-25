@@ -35,7 +35,10 @@ gdjs.SceneStack.prototype.onGameResolutionResized = function() {
 gdjs.SceneStack.prototype.step = function(elapsedTime) {
 	if (this._stack.length === 0) return false;
 
-	var currentScene = this._stack[this._stack.length - 1];
+    var currentScene = this._stack[this._stack.length - 1];
+    
+    GDAPI.currentScene = currentScene;
+
     if (currentScene.renderAndStep(elapsedTime)) {
     	var request = currentScene.getRequestedChange();
         //Something special was requested by the current scene.
